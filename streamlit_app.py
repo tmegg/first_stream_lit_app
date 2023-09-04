@@ -41,4 +41,5 @@ my_data_row = my_cur.fetchall()
 streamlit.header("Fruit load list contains:")
 streamlit.dataframe(my_data_row)
 
-
+fruit_choice_two = streamlit.text_input('Enter another freui','jackfruit')
+streamlit.write('The user entered ', fruit_choice_two)
