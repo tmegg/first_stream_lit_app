@@ -55,8 +55,7 @@ if streamlit.button('Get fruit load list'):
 
 fruit_choice_two = streamlit.text_input('Enter another fruit','jackfruit')
 add_fruit_button = streamlit.button('add fruit to list')
-streamlit.write('Thanks for adding  ', fruit_choice_two)
 
 if add_fruit_button:
   streamlit.write('Thanks for adding  ', fruit_choice_two)
-  my_cur.execute("insert into fruit_load_list values (fruit_choice_two)")
+  my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values %s", (fruit_choice_two))
